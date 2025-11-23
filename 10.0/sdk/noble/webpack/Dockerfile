@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0.308-bookworm-slim AS base
+FROM mcr.microsoft.com/dotnet/sdk:10.0.100-noble AS base
 
 FROM base AS build
 ENV NODE_VERSION=24.11.1
