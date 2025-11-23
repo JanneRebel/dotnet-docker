@@ -2,7 +2,7 @@
 Microsoft removed NodeJS from their .NET Core Docker images ([announcement](https://github.com/aspnet/Announcements/issues/298)). This image adds back NodeJS for build time with Webpack pre-installed.
 
 # Ingredients
-* Based on docker image [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/):10.0.100-noble
+* Based on docker image [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/):10.0.100-alpine3.22
 * [NodeJS](https://nodejs.org/) 24.11.1
 * [Webpack](https://www.npmjs.com/package/webpack) 5.103.0
 * [Webpack-cli](https://www.npmjs.com/package/webpack-cli) 6.0.1
