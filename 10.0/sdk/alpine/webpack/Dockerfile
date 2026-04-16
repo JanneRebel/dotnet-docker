@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/sdk:10.0.201-alpine3.23 AS base
+FROM mcr.microsoft.com/dotnet/sdk:10.0.202-alpine3.23 AS base
 
 FROM base AS build
-ENV NODE_VERSION=24.14.1
-ENV NODE_DOWNLOAD_SHA=4cdc6bf5891d1f51903c663b2f7f6a636c24dd5940a62a1785ea3d911284b008
+ENV NODE_VERSION=24.15.0
+ENV NODE_DOWNLOAD_SHA=f55af5bd489c5347b113ca6594cae00a54b30ba57ac5875324311bfc6f4762e3
 RUN curl -SL "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64-musl.tar.gz" --output nodejs.tar.gz \
     && echo "$NODE_DOWNLOAD_SHA  nodejs.tar.gz" | sha256sum -c - \
     && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 --no-same-owner \

@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0.312-bookworm-slim AS base
+FROM mcr.microsoft.com/dotnet/sdk:9.0.313-bookworm-slim AS base
 
 FROM base AS build
-ENV NODE_VERSION=24.14.1
-ENV NODE_DOWNLOAD_SHA=ace9fa104992ed0829642629c46ca7bd7fd6e76278cb96c958c4b387d29658ea
+ENV NODE_VERSION=24.15.0
+ENV NODE_DOWNLOAD_SHA=44836872d9aec49f1e6b52a9a922872db9a2b02d235a616a5681b6a85fec8d89
 RUN curl -SL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz" --output nodejs.tar.gz \
     && echo "$NODE_DOWNLOAD_SHA  nodejs.tar.gz" | sha256sum -c - \
     && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 \

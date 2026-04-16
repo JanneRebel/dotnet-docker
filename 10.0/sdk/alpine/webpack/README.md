@@ -2,8 +2,8 @@
 Microsoft removed NodeJS from their .NET Core Docker images ([announcement](https://github.com/aspnet/Announcements/issues/298)). This image adds back NodeJS for build time with Webpack pre-installed.
 
 # Ingredients
-* Based on docker image [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/):10.0.201-alpine3.23
-* [NodeJS](https://nodejs.org/) 24.14.1
+* Based on docker image [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/):10.0.202-alpine3.23
+* [NodeJS](https://nodejs.org/) 24.15.0
 * [Webpack](https://www.npmjs.com/package/webpack) 5.106.1
 * [Webpack-cli](https://www.npmjs.com/package/webpack-cli) 6.0.1
 * [TypeScript](https://www.npmjs.com/package/typescript) 5.9.3
@@ -12,9 +12,9 @@ Microsoft removed NodeJS from their .NET Core Docker images ([announcement](http
 
 # Full Tag Listing
 ## Linux amd64 tags
-- [`8.0.419-bookworm-slim`, `8.0-sdk` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/8.0/sdk/bookworm-slim/webpack/Dockerfile)
-- [`8.0.419-alpine`, `8.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/8.0/sdk/alpine/webpack/Dockerfile)
-- [`9.0.312-bookworm-slim`, `9.0-sdk` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/9.0/sdk/bookworm-slim/webpack/Dockerfile)
-- [`9.0.312-alpine`, `9.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/9.0/sdk/alpine/webpack/Dockerfile)
-- [`10.0.201-noble`, `10.0-sdk`, `latest` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/10.0/sdk/noble/webpack/Dockerfile)
-- [`10.0.201-alpine`, `10.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/10.0/sdk/alpine/webpack/Dockerfile)
+- [`8.0.420-bookworm-slim`, `8.0-sdk` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/8.0/sdk/bookworm-slim/webpack/Dockerfile)
+- [`8.0.420-alpine`, `8.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/8.0/sdk/alpine/webpack/Dockerfile)
+- [`9.0.313-bookworm-slim`, `9.0-sdk` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/9.0/sdk/bookworm-slim/webpack/Dockerfile)
+- [`9.0.313-alpine`, `9.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/9.0/sdk/alpine/webpack/Dockerfile)
+- [`10.0.202-noble`, `10.0-sdk`, `latest` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/10.0/sdk/noble/webpack/Dockerfile)
+- [`10.0.202-alpine`, `10.0-sdk-alpine` (*Dockerfile*)](https://github.com/JanneRebel/dotnet-docker/blob/master/10.0/sdk/alpine/webpack/Dockerfile)
