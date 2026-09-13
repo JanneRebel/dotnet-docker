@@ -1,13 +1,13 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0.404-alpine3.20 AS base
+FROM mcr.microsoft.com/dotnet/sdk:8.0.425-alpine3.23 AS base
 
 FROM base AS build
-ENV NODE_VERSION=22.12.0
-ENV NODE_DOWNLOAD_SHA=8d96de0293fc3978d09e2a3fee68c66bca4efcca90f52105e6f7463636e97308
+ENV NODE_VERSION=24.21.0
+ENV NODE_DOWNLOAD_SHA=01a713e34da98e7b4d2a3191ee7ca3f93dd0384d1a2ef23c379b2161ee6e133a
 RUN curl -SL "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64-musl.tar.gz" --output nodejs.tar.gz \
     && echo "$NODE_DOWNLOAD_SHA  nodejs.tar.gz" | sha256sum -c - \
     && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 --no-same-owner \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-    && npm install --global gulp@5.0.0 gulp-cli@3.0.0 typescript@5.7.2
+    && npm install --global gulp@5.0.1 gulp-cli@3.1.0 typescript@5.9.3
 
 FROM base AS final
 COPY --from=build /usr/local/bin /usr/local/bin
